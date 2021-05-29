@@ -2,12 +2,12 @@ const firebase = require("firebase/app")
 require("firebase/firestore")
 
 const firebaseConfig = { 
-apiKey: "AIzaSyD-RLxCwIkAJqAkFyIpGw5F7ZqI_-Kkj6I",
-authDomain: "kiei-451-ad584.firebaseapp.com",
-projectId: "kiei-451-ad584",
-storageBucket: "kiei-451-ad584.appspot.com",
-messagingSenderId: "946230721329",
-appId: "1:946230721329:web:ef0987433537e53ec0ce10"
+  apiKey: "AIzaSyBYCzQR3r_DGyT9pV-iNTMlDA2aGOvNR_k",
+  authDomain: "final-95290.firebaseapp.com",
+  projectId: "final-95290",
+  storageBucket: "final-95290.appspot.com",
+  messagingSenderId: "571967534209",
+  appId: "1:571967534209:web:670ce6ec02e9b0a3e24980"
 } // replace
 
 if (!firebase.apps.length) {
