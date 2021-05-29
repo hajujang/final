@@ -2,7 +2,7 @@
 // allows us to use firebase
 let firebase = require(`./firebase`)
 
-// /.netlify/functions/create_comment?postId=xxxxxxxxx&userName=Brian&body=Tacos!
+// /.netlify/functions/store_data/?queryStringParameters
 exports.handler = async function(event) {
 
   let userName = event.queryStringParameters.userName
