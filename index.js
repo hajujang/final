@@ -71,18 +71,23 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // Fill the global element with the price
     globalElement.insertAdjacentHTML(`beforeend`,`
     <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
-  })
+    
+    // build a save the data button
+    document.querySelector(`.get-coin`).insertAdjacentHTML (`afterend`,
+    `<button class="saveData border bg-purple-500 text-white rounded px-2 py-2">Save</button>`)
 
-    // Store a reference to the "global-price element"
-    let globalElement = document.querySelector(`.global-price`)
+    // get a reference to the sign out button
+    let saveButton = document.querySelector(`.saveData`)
 
-    // Fill the global element with the price
-    globalElement.insertAdjacentHTML(`beforeend`,`
-    <div class="font-bold text-3xl">Current ${globalPrice} price in the global</div>`)
-  })
-
-
-
+    // store the data to the fire base
+    saveButton.addEventListener(`click`, async function(event) {
+  
+        let url = `/.netlify/functions/store_data?userName=${user.displayName}&globalPrice=${globalPrice}`
+  
+        let response = await fetch(url)
+        })
+           
+      })
 
     // // Build the URL for our posts API
     // let url = `/.netlify/functions/posts`
@@ -94,9 +99,11 @@ firebase.auth().onAuthStateChanged(async function(user) {
     // let json = await response.json()
 
     // // Write the json-formatted data to the console in Chrome
-    // console.log(json)
+    // console.log(json) 
+  }  
 
-  } else {
+
+  else {
     // Signed out
     console.log('signed out')
 
