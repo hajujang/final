@@ -10,41 +10,39 @@
 </head>
 
 <body>
-  <div class="flex items-center">Welcome to the US Cryptocurrency Arbitrage Community for Korean Investors (USCACforK) 
-  </div>
- 
-  <!-- New post form -->
+  <div class="p-8">
+    <strong class="text-2xl">How does this work?</strong> USCACforK is a closed community of the US investors. We buy cryptocurrencies in the US exchange on behalf of investors in South Korea and send them to the SK investors wallet. You (SK investors) need to post your desired coin type, amount, and price. The price needs to be higher than the price in the US. We then contact you individually to do the transactions. You can pay via either credit card settlement, or international transfer. Based on your transaction records and our decision you can do this arbitrage transactions multiple times 
+  </div>    
 
-  <div class="p-8 space-y-8">
+  <div class="space-y-8">
     <div class="my-16">
       <div class="text-center">
-        <div>
-          Check how much free return you can make today!
+
+        <div class="font-bold text-2xl">
+          Post your demand 
         </div>
         <div>
-          Try a ticker: btc (Bitcoin), eth (Etherium), rxp (Ripple), doge (Dogecoin), uni (Uniswap), etc.
+          (Exchanges you are using / Preferred coin you want to buy / amounts / Your bid price per 1 coin / userName)
         </div>
-        <form>
-         <input type="text" name="coin" id="coin" placeholder="Coin" class="border border-gray-400 rounded p-2 mr-1">
-         <button class="get-coin border bg-green-500 text-white rounded px-4 py-2">Check out the free return for you!</button> 
-        </form>
+        <div>
+          (e.g., Bithumb / BTC / 0.65/ $35000 / ABC)
+        </div>
+        <div>
+          <form class="w-full mt-8">
+            <input type="text" id="cryptoPostsBody" name="cryptoPostsBody" placeholder="exchange/coin/amounts/bid" class="my-2 p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+            <button id="post-button" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl">Post</button>
+          </form>
+        </div>
+
+      <div class="cryptoPosts">
+        <!-- cryptoPosts rendered from JavaScript -->
       </div>
     </div>
+  </div>
 
-    <div class="p-8 space-y-8">
-        <div class="text-center">
-          <div class="korea-price">
-          </div>
-          <div class="global-price">
-          </div>
-          <div class="premium">
-          </div>
-    </div>
-    <div class="p-8 space-y-8">
+
 
     </div>
-
-    <div class="text-center">Log In or Join Us today to meet the helpers in the US</div>
     <div class="sign-in-or-sign-out"></div>
 
   <!-- Put the Firebase config here -->
@@ -74,7 +72,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-  <script src="index.js"></script>
+  <script src="index2.js"></script>
 </body>
 
 </html>
