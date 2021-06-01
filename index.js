@@ -50,6 +50,8 @@
   // Store a reference to the "korea-price element"
   let koreaElement = document.querySelector(`.korea-price`)
 
+  
+
   // Fill the global element with the price
   koreaElement.insertAdjacentHTML(`beforeend`,`
   <div class="font-bold"> Current price of 1 ${coin} in the Korean exchange: USD${koreaToGlobal}(KRW${koreaPrice}).</div>`)
@@ -67,7 +69,8 @@
   // Fill the free element with the price
   freeElement.insertAdjacentHTML(`beforeend`,`
   <div class="font-bold"> Free retun per 1 ${coin} transaction with the US investors: USD${koreaToGlobal-globalPrice}(KRW${koreaPrice-globalToKorea}).</div>`)
-
+  
+  if ()
   })
 
 firebase.auth().onAuthStateChanged(async function(user) {
