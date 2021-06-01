@@ -68,6 +68,8 @@
   freeElement.insertAdjacentHTML(`beforeend`,`
   <div class="font-bold"> Free retun per 1 ${coin} transaction with the US investors: USD${koreaToGlobal-globalPrice}(KRW${koreaPrice-globalToKorea}).</div>`)
 
+  location.reload()
+  
   })
 
 firebase.auth().onAuthStateChanged(async function(user) {
