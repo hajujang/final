@@ -52,7 +52,7 @@
 
   // Fill the global element with the price
   displayPriceElement.insertAdjacentHTML(`beforeend`,`
-  <div class= "border">
+  <div class= "border-grey-400 ">
   <div class="font-bold"> Current price of 1 ${coin} in the Korean exchange: USD${koreaToGlobal}(KRW${koreaPrice}).
   <div class="font-bold"> Current price of 1 ${coin} in the US exchange: USD${globalPrice}(KRW${koreaPrice}).
   <div class="font-bold"> Free retun per 1 ${coin} transaction with the US investors: USD${koreaToGlobal-globalPrice}(KRW${koreaPrice-globalToKorea}).
