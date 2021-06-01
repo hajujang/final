@@ -51,21 +51,21 @@
   let koreaElement = document.querySelector(`.korea-price`)
 
   // Fill the global element with the price
-  koreaElement.insertAdjacentHTML(`afterend`,`
+  koreaElement.insertAdjacentHTML(`beforeend`,`
   <div class="font-bold"> Current price of 1 ${coin} in the Korean exchange: USD${koreaToGlobal}(KRW${koreaPrice}).</div>`)
 
   // Store a reference to the "global-price element"
   let globalElement = document.querySelector(`.global-price`)
 
   // Fill the global element with the price
-  globalElement.insertAdjacentHTML(`afterend`,`
+  globalElement.insertAdjacentHTML(`beforeend`,`
   <div class="font-bold"> Current price of 1 ${coin} in the US exchange: USD${globalPrice}(KRW${koreaPrice}).</div>`)
 
   // Store a reference to the "free-return element"
   let freeElement = document.querySelector(`.premium`)
 
   // Fill the free element with the price
-  freeElement.insertAdjacentHTML(`afterend`,`
+  freeElement.insertAdjacentHTML(`beforeend`,`
   <div class="font-bold"> Free retun per 1 ${coin} transaction with the US investors: USD${koreaToGlobal-globalPrice}(KRW${koreaPrice-globalToKorea}).</div>`)
 
   })
