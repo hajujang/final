@@ -2,7 +2,7 @@
   //  Get a reference to the "get coin" button
   let getCoinButton = document.querySelector(`.get-coin`)
 
-  // When the "get weather" button is clicked:
+  // When the "get coin" button is clicked:
   getCoinButton.addEventListener(`click`, async function(event){
   
   // - Ignore the default behavior of the button
