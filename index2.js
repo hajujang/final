@@ -57,27 +57,31 @@ firebase.auth().onAuthStateChanged(async function(user) {
       // Create some markup using the post data, insert into the "cryptoPosts" element
       postsDiv.insertAdjacentHTML(`beforeend`, `
       <div class="md:mt-16 mt-8">
-          <div class="md:mx-0 mx-4 mt-8">
-            <span class="font-bold text-xl">${post.userName}</span>
+          <div class="md:mx-0 mt-8">
+            <span class="font-bold text-xl text-gray-400">${post.userName}</span>
           </div>
       
-          <div class="my-8">
-            <span class>"${post.body}"</span> 
+          <div>
+            <span class="text-green-500">Bid: ${post.body}</span> 
           </div>
 
-          <div class="text-3xl md:mx-0 mx-4 mb-4">
-            <button id="like-button-${postId}">❤️</button>
+          <div class="text-l font-semibold md:mx-0 mb-4 text-gray-400">
+            <button id="like-button-${postId}"> ♥ </button>
             ${post.numOfLikes}
           </div>
 
-          ${comments}
+          <div>
+            <span class="text-gray-400">${comments}</span>
+            </div>
 
           <form class="mt-4">
-            <input type="text" id="comment-${postId}" class="mr-2 rounded-lg border px-3 py-2 focus:outline-none focus:ring-purple-500 focus:border-purple-500" placeholder="Add a comment...">
-            <button id="post-comment-button-${postId}" class="py-2 px-4 rounded-md shadow-sm font-medium text-white bg-purple-600 focus:outline-none">Post</button>
+            <input type="text" id="comment-${postId}" class="mr-2 rounded border-2 border-gray-600 px-3 py-2 placeholder-gray-600  focus:outline-none focus:ring-green-500 focus:border-green-500 focus:text-gray-200 bg-gray-900" placeholder="Add a comment...">
+            <button id="post-comment-button-${postId}" class="py-2 px-4 border-gray-600 border-2 rounded-md shadow-sm font-medium text-gray-600 bg-gray-900 focus:border-green-500 focus:text-green-500">Post</button>
           </form>
         </div>
       `)
+
+     
 
       // comments
       // get a reference to the newly created post comment button

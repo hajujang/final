@@ -4,46 +4,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final</title>
+  <title>Advanta | Trial</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.css" />
 </head>
 
-<body>
-  <div class="p-8">
-    <strong class="text-2xl">How does this work?</strong> USCACforK is a closed community of the US investors. We buy cryptocurrencies in the US exchange on behalf of investors in South Korea and send them to the SK investors wallet. You (SK investors) need to post your desired coin type, amount, and price. The price needs to be higher than the price in the US. We then contact you individually to do the transactions. You can pay via either credit card settlement, or international transfer. Based on your transaction records and our decision you can do this arbitrage transactions multiple times 
-  </div>    
+<body class="bg-gray-900">
+    <div class="flex pt-4 pb-4 pl-4 pr-4">
+      <div class="pr-2 align-middle w-12"><a href="index.html"><img class="w-10" src="advanta logo pink.png"></a></div>
+      <div class="text-2xl font-extrabold text-left align-middle w-40">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-blue-600"><a href="index.html">Advanta</a></span>
+       </div>
+       <div class="text-right w-full sign-in-or-sign-out"></div>
+    </div>
+    <div class="text-6xl font-extrabold text-center text-green-500 pt-8">Order Platform</div>
+  
+    <div class="text-left text-2xl text-gray-600 font-semibold text-center pt-16">How does this work</div>
+    <div class="sm:flex  pt-4 pb-4 pl-4 pr-4">
+      <ul class= "sm:w-1/4 pr-8 sm:pl-8">
+        <center>
+        <li class="w-6"><img src="num_1.png"></li>
+        <li class="text-xl text-gray-600 text-center font-semibold pt-2">Place your order on Advanta's order platform</li>          
+        </center>
+        </ul>
+      <ul class= "sm:w-1/4 pr-8">
+        <center>
+        <li class="w-6"><img src="num_2.png"></li>
+        <li class="text-xl text-gray-600 text-center font-semibold pt-2">Provide verification when contacted by our team</li>
+        </center>   
+        </ul>
+      <ul class= "sm:w-1/4 pr-8">
+        <center>
+        <li class="w-6"><img src="num_3.png"></li>
+        <li class="text-xl text-gray-600 text-center font-semibold pt-2">Recieve cryptocurrency in your Korean wallet</li>
+        </center>   
+        </ul>
+      <ul class= "sm:w-1/4  pr-8">
+        <center>
+        <li class="w-6"><img src="num_4.png"></li>
+        <li class="text-xl text-gray-600 text-center font-semibold pt-2">Settle using international wire or credit card</li>
+        </center>    
+        </ul>
+    </div>
+    <div class="text-green-500 text-center font-semibold text-sm pt-16 pb-24">Scroll down to place your order</div>
+    <hr class="border-thin border-gray-700 align-bottom"></hr>
+  </div>
 
-  <div class="space-y-8">
+  <div class="space-y-8 pl-8 pr-8">
     <div class="my-16">
       <div class="text-center">
 
-        <div class="font-bold text-2xl">
-          Post your demand 
+        <div class="font-bold text-3xl text-gray-200">
+          Place your order here 
         </div>
-        <div>
-          (Exchanges you are using / Preferred coin you want to buy / amounts / Your bid price per 1 coin / userName)
+        <div class="text-xl text-gray-400 text-center font-semibold pt-2">
+          Order syntax: your crypto exchange / your coin ticker / your quantity / your bid per 1 coin / your user name
         </div>
-        <div>
-          (e.g., Bithumb / BTC / 0.65/ $35000 / ABC)
+        <div class="text-gray-600 text-center font-semibold">
+          e.g. bithumb / BTC / 0.65 / $35000 / ABC
         </div>
         <div>
           <form class="w-full mt-8">
-            <input type="text" id="cryptoPostsBody" name="cryptoPostsBody" placeholder="exchange/coin/amounts/bid" class="my-2 p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500">
-            <button id="post-button" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl">Post</button>
+            <input type="text" id="cryptoPostsBody" name="cryptoPostsBody" sm:placeholder="exchange / coin / quantity / bid" class="my-2 p-2 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+            <button id="post-button" class="bg-green-500 hover:bg-green-600 text-white rounded px-4 py-2">Bid</button>
           </form>
+          </div>
         </div>
+        <div class="text-green-500 text-center font-semibold text-sm pt-16 pb-24">Scroll down to view user bids and comments</div>
 
-      <div class="cryptoPosts">
-        <!-- cryptoPosts rendered from JavaScript -->
-      </div>
+      <hr class="border-thin border-gray-700"></hr>
+
+        <div class="font-bold text-3xl text-gray-600 text-center pt-24">
+          User bids and comments 
+        </div>
+      
+        <div style="text-align: center;">
+          <div style="display: inline-block; text-align: left;">
+              <div class="cryptoPosts pl-4">
+              <!-- cryptoPosts rendered from JavaScript -->
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 
 
 
     </div>
-    <div class="sign-in-or-sign-out"></div>
+    
 
   <!-- Put the Firebase config here -->
   <!-- The core Firebase JS SDK is always required and must be listed first -->

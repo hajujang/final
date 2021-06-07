@@ -12,7 +12,7 @@
   let coinInput = document.querySelector(`#coin`)
 
   // Get the user-entered location and days from the element's value
-  let coin = coinInput.value
+  let coin = coinInput.value.toLowerCase()
   let urlGlobal = `https://api.huobi.pro/market/detail?symbol=${coin}usdt`
   let urlKorea = `https://api.bithumb.com/public/ticker/${coin}_krw`
   let urlExRate = `https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD`
@@ -50,14 +50,32 @@
   // Store a reference to the "displayPrice element"
   let displayPriceElement = document.querySelector(`.display-price`)
 
+  //Converting all curencies into 2 decimals
+  let korea2dec = koreaToGlobal.toFixed(2)
+  let gloabal2dec = globalPrice.toFixed(2)
+  let arbit = korea2dec-gloabal2dec
+  let arbit2dec = arbit.toFixed(2)
+  let coinUpper = coin.toUpperCase()
+
   // Fill the global element with the price
-  displayPriceElement.insertAdjacentHTML(`beforeend`,`
-  <div class= "border-2 p-4">
-  <div class="font-bold"> Current price of 1 ${coin} in the Korean exchange: USD${koreaToGlobal}(KRW${koreaPrice}).
-  <div class="font-bold"> Current price of 1 ${coin} in the US exchange: USD${globalPrice}(KRW${globalToKorea}).
-  <div class="font-bold"> Free retun per 1 ${coin} transaction with the US investors: USD${koreaToGlobal-globalPrice}(KRW${koreaPrice-globalToKorea}).
+  // displayPriceElement.insertAdjacentHTML(`beforeend`,`
+  // <div class="font-semibold text-gray-300"> On 1 ${coinUpper} arbitrage transaction, you can earn:
+  // <div class="text-6xl font-extrabold text-center align-middle">
+  //     <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-blue-900"><a href="index.html">US$ ${arbit2dec}</a></span>
+  //    </div>
+  // <div class="font-semibold text-gray-300"> Current price of 1 ${coinUpper} in the Korean exchange: US$ ${korea2dec}
+  // <div class="font-semibold text-gray-300"> Current price of 1 ${coinUpper} in the US exchange: US$ ${gloabal2dec}
+  // </div>`
+  // )
+
+  document.querySelector(`.display-price`).innerHTML = `
+  <div class="font-semibold text-gray-300"> On 1 ${coinUpper} arbitrage transaction, you can earn:
+  <div class="text-6xl font-extrabold text-center align-middle">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-blue-900"><a href="index.html">US$ ${arbit2dec}</a></span>
+     </div>
+  <div class="font-semibold text-gray-300"> Current price of 1 ${coinUpper} in the Korean exchange: US$ ${korea2dec}
+  <div class="font-semibold text-gray-300"> Current price of 1 ${coinUpper} in the US exchange: US$ ${gloabal2dec}
   </div>`
-  )
   
   })
 
